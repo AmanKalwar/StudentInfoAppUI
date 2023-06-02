@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="p-2 w-50 bd-highlight">
+      <div class="input-group mb-3">
+        <span class="input-group-text">Name</span>
+        <input type="text" class="form-control" [(ngModel)]="StudentName">
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text">Course</span>
+        <input type="text" class="form-control" [(ngModel)]="Course">
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text">Specialization</span>
+        <input type="text" class="form-control" [(ngModel)]="Specialization">
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text">Percentage</span>
+        <input type="text" class="form-control" [(ngModel)]="Percentage">
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text">Department ID</span>
+        <input type="text" class="form-control" [(ngModel)]="DepartmentId">
+      </div>
+      
+    </div>    
+  </div>
+
+  <div class="text-center">
+    <button type="button" (click)="addStudent()" *ngIf="std.StudentId=='0'" class="btn btn-primary">
+      Create
+    </button>
+  </div> 
+
+  <div class="text-center">
+    <button type="button" (click)="updateStudent()" *ngIf="std.StudentId!='0'" class="btn btn-primary">
+      Update
+    </button>
+  </div>
